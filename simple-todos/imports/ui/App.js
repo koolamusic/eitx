@@ -19,8 +19,8 @@ class App extends Component {
     }
 
     renderTasks = () => {
-        return this.props.tasks.map((task) => ( 
-            <Task key={task._id} task={task} />
+        return this.props.tasks.map((todo) => ( 
+            <Task key={todo._id} task={todo} />
         ));
     }
 
@@ -47,15 +47,13 @@ class App extends Component {
                 <input type="text" ref="textInput" placeholder="Type to add new tasks" />
                 {/* <button type="submit">submit</button> */}
             </form>
-            
             </header>
-                
 
+            {/* <p>{JSON.stringify(this.props.tasks)}</p>     */}
             <ul>
               {this.renderTasks()}
             </ul>
 
-            
           </div>
         );
       }
@@ -63,6 +61,6 @@ class App extends Component {
 
 export default withTracker(() => {
     return {
-        tasks: Tasks.find({}).fetch(),
+        tasks: Tasks.find({}, {sort: { createdAt: -1} }).fetch(),
     };
 })(App);
