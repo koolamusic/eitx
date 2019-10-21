@@ -1,51 +1,51 @@
-<body>
-  <div class="container">
-    <header>
-      <h1>MEST EIT Manager</h1>
-      <br> {{> loginButtons}}
-    </header>
-    <br> {{#if currentUser}}
+<template name="Home">
     <div class="container">
-      <h3><strong>{{username}}</strong></h3>
-      <form class="new-eit" id="eitForm">
-        <input type="hidden" name="id" />
-        <div class="">
-          <h3>New EIT</h3>
-        </div>
-        <div>
-          <label>First Name</label>
-          <input type="text" name="firstname" placeholder="Type your first name" />
-        </div>
-        <div>
-          <label>Last Name</label>
-          <input type="text" name="lastname" placeholder="Type your last name" />
-        </div>
-        <div>
-          <label>Gender</label>
-          <input type="radio" value="male" name="gender"> Male
-          <input type="radio" value="female" name="gender"> Female
-        </div>
-        <div>
-          <label>Date of Birth</label>
-          <input type="date" required name='dateOfBirth'>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-
-    </div>
-
-    <br>
-    <hr><br>
-
-    <div class="">
-
+      <header>
+        <h1>MEST EIT Manager</h1>
+        <br> {{> loginButtons}}
+      </header>
+      <br> {{#if currentUser}}
+      <div class="container">
+        <h3><strong>{{username}}</strong></h3>
+        <form class="new-eit" id="eitForm">
+          <input type="hidden" name="id" />
+          <div class="">
+            <h3>New EIT</h3>
+          </div>
+          <div>
+            <label>First Name</label>
+            <input type="text" name="firstname" placeholder="Type your first name" />
+          </div>
+          <div>
+            <label>Last Name</label>
+            <input type="text" name="lastname" placeholder="Type your last name" />
+          </div>
+          <div>
+            <label>Gender</label>
+            <input type="radio" value="male" name="gender"> Male
+            <input type="radio" value="female" name="gender"> Female
+          </div>
+          <div>
+            <label>Date of Birth</label>
+            <input type="date" required name='dateOfBirth'>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+        
+      </div>
+      
       <br>
-      <!-- Eit Data Table  -->
-      <table class="table">
-        <!-- Table Headings -->
-        <tr>
-          <th></th>
-          <!-- <th># Number</th> -->
+      <hr><br>
+      
+      <div class="">
+        
+        <br>
+        <!-- Eit Data Table  -->
+        <table class="table">
+          <!-- Table Headings -->
+          <tr>
+            <th></th>
+            <!-- <th># Number</th> -->
           <th>First Name</th>
           <th>Last Name</th>
           <th>Gender</th>
@@ -60,4 +60,4 @@
     {{/if}}
     <br><br><br>
   </div>
-</body>
+</template>
