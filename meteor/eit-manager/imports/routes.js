@@ -1,7 +1,5 @@
 Router.route('/', function() {
-    this.render('Home', {data :{ function () {
-      return editUser = true
-    }}});
+    this.render('Home', {data :{page: 'Home'}})
 });
 
 Router.route('/eit', function() {

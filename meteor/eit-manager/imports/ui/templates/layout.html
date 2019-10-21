@@ -10,7 +10,10 @@
             <br />
             {{> loginButtons}}
         </header>
+        {{#if currentUser}}
 
         {{> yield}}
+        
+        {{/if}}
     </div>
 </template>
