@@ -1,10 +1,8 @@
 <template name="Home">
     <div class="container">
-      <header>
-        <h1>MEST EIT Manager</h1>
-        <br> {{> loginButtons}}
-      </header>
-      <br> {{#if currentUser}}
+      
+
+      {{#if currentUser}}
       <div class="container">
         <h3><strong>{{username}}</strong></h3>
         <form class="new-eit" id="eitForm">

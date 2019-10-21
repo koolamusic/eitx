@@ -1,0 +1,15 @@
+<template name="layout">
+    <div>
+            <a href="/">Home</a>
+            <a href="{{pathFor route='eit'}}">View EITs</a>
+    </div>
+    <div class="container">
+        <header>
+            <h1>MEST EIT Manager</h1>
+            <br />
+            {{> loginButtons}}
+        </header>
+
+        {{> yield}}
+    </div>
+</template>

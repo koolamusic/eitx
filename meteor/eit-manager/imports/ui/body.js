@@ -6,6 +6,7 @@ import { EITs } from '../api/eits.js';
 import './body.html';
 import './templates/eit_list.js';
 import './templates/eit.js';
+import './templates/layout.html'
 
 Template.body.onCreated(function bodyOnCreated() {
     this.state = new ReactiveDict();
@@ -13,7 +14,7 @@ Template.body.onCreated(function bodyOnCreated() {
 });
 
 Template.body.events({
-    'submit #eitForm'(event) {
+    'submit .new-eit'(event) {
         event.preventDefault();
         // console.log({event})
 
