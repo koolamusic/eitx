@@ -2,11 +2,13 @@ import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 import { EITs } from '../api/eits.js';
-
 import './body.html';
+
+
 import './templates/eit_list.js';
 import './templates/eit.js';
-import './templates/layout.html'
+import './templates/layout.js'
+import './templates/create.js'
 
 Template.body.onCreated(function bodyOnCreated() {
     this.state = new ReactiveDict();
@@ -16,7 +18,7 @@ Template.body.onCreated(function bodyOnCreated() {
 Template.body.events({
     'submit .new-eit'(event) {
         event.preventDefault();
-        // console.log({event})
+        console.log({event})
 
         // Get value from form element
         const target = event.target;

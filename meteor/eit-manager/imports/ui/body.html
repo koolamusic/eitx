@@ -1,7 +1,7 @@
 <template name="Home">
+<body>
     <div class="container">
       
-
       {{#if currentUser}}
       <div class="container">
         <h3><strong>{{username}}</strong></h3>
@@ -27,7 +27,7 @@
             <label>Date of Birth</label>
             <input type="date" required name='dateOfBirth'>
           </div>
-          <button type="submit">Submit</button>
+          <button type="submit" onclick="function subf(event){event.preventDefault()}">Submit</button>
         </form>
         
       </div>
@@ -44,18 +44,19 @@
           <tr>
             <th></th>
             <!-- <th># Number</th> -->
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Gender</th>
-          <th>D.O.B</th>
-        </tr>
-        <!-- Table List  -->
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Gender</th>
+            <th>D.O.B</th>
+          </tr>
+          <!-- Table List  -->
 
-        {{> eitList}}
-      </table>
-      <button type="button" id="deleteBtn" style="background:red;"> Delete </button>
+          {{> eitList}}
+        </table>
+        <button type="button" id="deleteBtn" style="background:red;"> Delete </button>
+      </div>
+      {{/if}}
+      <br><br><br>
     </div>
-    {{/if}}
-    <br><br><br>
-  </div>
-</template>
+  </body>
+  </template>
