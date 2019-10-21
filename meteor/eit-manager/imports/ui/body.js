@@ -13,8 +13,9 @@ Template.body.onCreated(function bodyOnCreated() {
 });
 
 Template.body.events({
-    'submit .new-eit'(event) {
+    'submit #eitForm'(event) {
         event.preventDefault();
+        // console.log({event})
 
         // Get value from form element
         const target = event.target;
