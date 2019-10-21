@@ -1,7 +1,8 @@
-import {
-  Accounts
-} from 'meteor/accounts-base';
+import { Meteor } from 'meteor/meteor'
+import { Accounts } from 'meteor/accounts-base';
 
-Accounts.ui.config({
-  passwordSignupFields: 'USERNAME_ONLY',
-});
+Meteor.startup( ()=> {
+  Accounts.ui.config({
+    passwordSignupFields: 'USERNAME_ONLY',
+  });
+})
