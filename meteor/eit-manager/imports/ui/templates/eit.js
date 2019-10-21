@@ -2,7 +2,7 @@ import { Template } from 'meteor/templating';
 import { EITs } from '../../api/eits.js';
 import './eit.html';
 
-let deleteIds = [];
+const deleteIds = [];
 
 Template.eit.events({
     'click .toggle-checked'(event) {
@@ -11,19 +11,17 @@ Template.eit.events({
         } else {
             deleteIds.splice(deleteIds.indexOf(this._id), 1);
         }
+        console.log(deleteIds);
     },
 
+    // Update EIT
     'click .updateBtn'(event) {
         updateEIT(this._id, this);
     },
 
-    // 'click tr' (event) {
-    //   updateEIT(this._id, this);
-    // }
-});
-
-Template.body.events({
+    // Bulk Delete EITS
     'click #deleteBtn'() {
+        console.log(deleteIds)
         for (index in deleteIds) {
             Meteor.call('eits.remove', deleteIds[index]);
         }

@@ -39,3 +39,23 @@ Template.create.events({
         target.reset();
     },
 });
+
+const deleteIds = [];
+
+Template.create.events({
+    'click .toggle-checked'(event) {
+        if (event.target.checked) {
+            deleteIds.push(this._id);
+        } else {
+            deleteIds.splice(deleteIds.indexOf(this._id), 1);
+        }
+        console.log(deleteIds);
+    },
+    'click #deleteBtn'(e) {
+        console.log(e);
+        for (index in deleteIds) {
+            Meteor.call('eits.remove', deleteIds[index]);
+        }
+    },
+});
+

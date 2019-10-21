@@ -50,4 +50,11 @@ Template.body.events({
         // Clear form
         target.reset();
     },
+
+    // Bulk Delete EITS on Homepage
+    'click #deleteBtn'() {
+        for (index in deleteIds) {
+            Meteor.call('eits.remove', deleteIds[index]);
+        }
+    },
 });

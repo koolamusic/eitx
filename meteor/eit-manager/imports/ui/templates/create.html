@@ -1,7 +1,7 @@
 <template name="create">
 
           {{#if currentUser}}
-          <div class="container">
+        <div class="container">
             <h3><strong>{{username}}</strong></h3>
             <form class="new-eit" id="eitForm">
               <input type="hidden" name="id" />
@@ -25,9 +25,9 @@
                 <label>Date of Birth</label>
                 <input type="date" required name='dateOfBirth'>
               </div>
-              <button type="submit" onclick="()=>event.preventDefault()">Submit</button>
+              <button class="btn btn-primary" type="submit" onclick="()=>event.preventDefault()">Submit</button>
             </form>          
-          </div>
+        </div>
           
           <hr>
           
@@ -47,7 +47,7 @@
                     
                     {{> eitList}}
                 </table>
-                <button type="button" id="deleteBtn" style="background:red;"> Delete </button>
+                <button class="btn btn-danger" type="button" id="deleteBtn" style="background:red;"> Delete </button>
             </div>
         {{/if}}
 </template>
