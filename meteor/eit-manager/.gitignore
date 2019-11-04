@@ -1,4 +1,0 @@
-node_modules/
-
-# Dont track .deploy folder
-.deploy
