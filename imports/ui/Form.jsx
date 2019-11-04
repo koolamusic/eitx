@@ -88,7 +88,7 @@ class FORM extends Component{
               placeholder ="Area of Interest. ie business"
               onChange={this.handleChange}
           />
-          <label>Interesting Fact</label>
+          <label>Fun Fact</label>
           <input
               type="text"
               ref="fact"
