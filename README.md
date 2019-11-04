@@ -1,4 +1,5 @@
 # EIT MANAGER
+[![Build Status](https://travis-ci.org/koolamusic/eitx.svg?branch=master)](https://travis-ci.org/koolamusic/eitx)
 
 ## Installation
 
