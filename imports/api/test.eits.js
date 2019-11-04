@@ -135,7 +135,7 @@ if (Meteor.isServer) {
         const editEITs = Meteor.server.method_handlers["eits.edit"];
         const invocation = { userId };
         editEITs.apply(invocation, [EitId,{
-          name: "Allie",
+          name: "Helen",
           age: "23",
           phone: "050482828",
           country: "Ghana",
